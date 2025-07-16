@@ -15,7 +15,7 @@ app.use(morgan('dev')); // Logging
 // Route to fetch data from FastAPI
 app.get('/api/agv-schedule', async (req, res) => {
   try {
-    const response = await axios.get('http://127.0.0.1:8000/schedule-results');
+    const response = await axios.get('https://rockwell-2.onrender.com/schedule-results');
     res.json(response.data);
   } catch (error) {
     console.error('Error fetching data from FastAPI:', error.message);
