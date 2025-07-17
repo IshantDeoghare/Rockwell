@@ -236,7 +236,7 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/agv-schedule')
+        const response = await fetch('https://rockwell-3.onrender.com/api/agv-schedule')
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`)
         const result = await response.json()
 
